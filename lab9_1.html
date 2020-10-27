@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type = "text/javascript">
+let date = new Date();
+let time = date.getHours()*60 + date.getMinutes();
+alert(time);
+let result;
+if (time >= 7*60 && time < 8*60) {
+	result = 'завтрак';
+} else if (time >= 13*60 && time < 14*60){
+	result = 'обед';
+}
+else if (time >= 19*60 && time < 20*60){
+	result = 'ужин';
+}
+else if (time >= 9*60 && time < 18*60){
+	result = 'работа';
+}
+else if (time >= 18*60 && time < 23*60){
+	result = 'отдых';
+}
+else if (time >= 23*60 && time < 6.5*60){
+	result = 'сон';
+}
+alert ('Сейчас: ' + time/60 + '(время ' + result +')');
+
+</script>
+</body>
+</html>
