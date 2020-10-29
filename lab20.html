@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> lab20 </title>
+	<p> lab 20 <p>
+</head>
+<body>
+<script type="text/javascript">
+let n = prompt("Введите входное значение");
+let arr = [];
+function getRandomInt(min,max) {
+	return Math.floor(Math.random()*(max-min+1)) + min;
+}
+for (let i = 0; i<=n; i++) {
+	let a = getRandomInt(0,10);
+	arr.push(a);
+}
+document.write(arr);
+
+</script>
+</body>
+</html>
