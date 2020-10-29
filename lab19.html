@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> lab19 </title>
+</head>
+<body>
+<script type="text/javascript">
+let string = prompt("Введите символы");
+let set = new Set();
+for (let s in string) {
+    set.add(string[s]);
+}
+arr = Array.from(set);
+arr = arr.join("-");
+document.write(arr);
+</script>
+</body>
+</html>
