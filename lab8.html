@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p> Введите строку </p>
+<input id = 'userInput' size = 60>
+<button onClick= 'userSubmit()'>Submit</button><br>
+<p><div id ='result'></div>
+<script type="text/javascript">
+function userSubmit() {
+	let str = document.getElementById('userInput').value;
+	debug(str, "strOnly", null);
+	str = str.split(' ');
+	for (let i=0; i < str.length; i++){
+str[i] = str[i].replace('a', 'o');
+while (str[i].indexOf('a') != -1) {
+	str[i] = str[i].replace('a', ' ');
+}
+
+}
+document.getElementById('result').innerHTML='Преобразованная строка: '+ str;
+}
+
+
+</script>
+</body>
+</html>
