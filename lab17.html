@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <p>1)длинам трех сторон;</p>
+    <p>2)трем углам и стороне;</p>
+    <p>3)двум сторонам и углу между ними;</p>
+    <p>4)двум сторонам и необразованному ими углу;</p>
+    <p>5)высоте треугольника и стороне к которой опущена эта высота;</p>
+    <p> </p>
+
+    <div id="txt"></div>
+    
+    <script type="text/javascript">
+
+
+        let UI = parseInt(prompt('Выберите действие: 1,2,3,4,5'));
+
+        switch (UI) {
+            case 1:
+                let a1 = parseInt(prompt('Первая сторона='));
+                let a2 = parseInt(prompt('Вторая сторона='));
+                let a3 = parseInt(prompt('Третья сторона='));
+                let p = (a1 + a2 + a3) / 2;
+                let s = (Math.sqrt(p * (p - a1) * (p - a2) * (p - a3)));
+                document.getElementById('txt').innerHTML = 'Площадь =' + s.toFixed(5);
+                break;
+            case 2:
+                let b1 = parseInt(prompt('Первый угол='));
+                let b2 = parseInt(prompt('Второй угол='));
+                let b3 = parseInt(prompt('Третьий угол(противоположный стороне)'));
+                let b = parseInt(prompt('Сторона='));
+                let m = ((b * b * Math.sin(b1 * Math.PI / 180) * Math.sin(b2 * Math.PI / 180)) / 2 * Math.sin(b3 * Math.PI / 180));
+                document.getElementById('txt').innerHTML = 'Площадь =' + s.toFixed(5);
+                break;
+            case 3:
+                let c = parseInt(prompt('Угол='));
+                let c1 = parseInt(prompt('Сторона 1='));
+                let c2 = parseInt(prompt('Сторона 2='));
+                let r = (0.5 * c1 * c2 * Math.sin(a * Math.PI / 180));
+                document.getElementById('txt').innerHTML = 'Площадь =' + s.toFixed(5);
+                break;
+            case 4:
+                let d = parseInt(prompt('Угол='));
+                let d1 = parseInt(prompt('Сторона 1='));
+                let d2 = parseInt(prompt('Сторона 2='));
+                let v = Math.asin(d1 / d2 * Math.sin(a * Math.PI / 180));
+
+                let f = (0.5 * d1 * d2 * Math.sin((180 - a - b) * Math.PI / 180));
+
+                document.getElementById('txt').innerHTML = 'Площадь =' + s.toFixed(5);
+                break;
+            case 5:
+                let h = parseInt(prompt('Высота='));
+                let g = parseInt(prompt('Сторона='));
+                let t = (0.5 * h * g);
+                document.getElementById('txt').innerHTML = 'Площадь =' + s.toFixed(5);
+                break;
+
+
+        }
+    </script>
+</body>
+</html>
