@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+    </head>
+       <body>
+           <script>
+            let n = 0;
+            let i = 0;
+            let arr = [];
+            let max = 0;
+            let min = 0;
+            let str = prompt (" Введите строку ", "");
+            str = str.replace(/[^\w\s]|_/g, "")
+                     .replace(/\s+/g, " ");
+            s1 = str.split(' ');
+            l = s1.length;
+            alert (" количество слов в строке " + l);
+             for (i in s1){
+                 arr.push(s1[i].length);
+             }
+             for (i in s1){
+                 if (arr[i] > n){
+                     n = arr[i];
+                     max = i;
+                 }
+                }
+                for (i in s1){
+                 if (arr[i] < n){
+                     n = arr[i];
+                     min = i;
+                 }
+                }
+                let m = 0;
+                for (i in arr){
+                 m = m + arr[i];
+                }
+             alert (" Cамая длинная строка " + arr[max] + "  символов " + " Cамая короткая строка " + arr[min] + "  символов " + m/l + " средняя длина слова" );
+           </script>
+     </body>
+</html>
